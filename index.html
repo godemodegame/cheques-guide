@@ -1,1 +1,27 @@
-<h1>Hello, world!</h1>
+<!DOCTYPE html>
+<html lang="ru">
+    <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
+    <script>
+        function setThemeClass() {
+            document.documentElement.className = Telegram.WebApp.colorScheme;
+        }
+        Telegram.WebApp.onEvent('themeChanged', setThemeClass);
+        setThemeClass();
+    </script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: var(--tg-theme-bg-color, #ffffff);
+            color: var(--tg-theme-text-color, #222222);
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            color-scheme: var(--tg-color-scheme);
+        }
+    </style>
+    <h1>Hello, world!</h1>
+
+    <script type="application/javascript">
+        Telegram.WebApp.ready();
+    </script>
+</html>
